@@ -14,7 +14,8 @@ test('get started link', async ({ page }) => {
   await page.getByRole('link', { name: 'Get started' }).click();
 
   // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: '1234' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'jjgit add .
+git commit -m "test: introduce deliberate Playwright failure"' })).toBeVisible();
 });
 
 

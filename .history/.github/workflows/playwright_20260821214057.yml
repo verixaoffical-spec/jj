@@ -18,8 +18,9 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests with TestDino
-      run: npx tdpw test -t ${{ secrets.TESTDINO_TOKEN }}
-    
+  run: npx tdpw test -t ${{ secrets.TESTDINO_TOKEN }}
+    - name: Run Playwright tests
+      run: npx playwright test
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
